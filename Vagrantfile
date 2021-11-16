@@ -12,6 +12,7 @@ SCRIPT
 
 Vagrant.configure("2") do |config|
   config.vm.box = "bento/ubuntu-21.04"
+  config.vm.network "public_network"
   config.vm.provider "parallels" do |prl|
     prl.name = "docker.local"
     prl.memory = 4096
